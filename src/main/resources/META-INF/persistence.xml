@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+<!--    <persistence-unit name="ecwo" transaction-type="JTA">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle9iDialect"/>
+            <property name="hibernate.connection.driver_class" value="oracle.jdbc.OracleDriver"/>
+            <property name="hibernate.connection.username" value="app"/>
+            <property name="hibernate.connection.password" value="app"/>
+            <property name="hibernate.connection.url" value="jdbc:oracle:thin:@ann:1521:accofull"/>
+            &lt;!&ndash;<property name="hibernate.hbm2ddl.auto" value="update"/>&ndash;&gt;
+            <property name="hibernate.connection.autocommit" value="false"/>
+        </properties>
+    </persistence-unit>-->
+    <persistence-unit name="ecwo_test" transaction-type="JTA">
+        <description>For test only</description>
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <jta-data-source>java:ecwo_test_DS</jta-data-source>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
+            <property name="hibernate.connection.url" value="jdbc:h2:tcp://localhost/~/test"/>
+            <property name="hibernate.connection.username" value="sa"/>
+            <property name="hibernate.connection.password" value=""/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+            <property name="hibernate.connection.autocommit" value="false"/>
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
