@@ -17,8 +17,8 @@ import java.util.Collection;
 @Entity
 @javax.persistence.Table(name = "TEACHERLOGIN", schema = "UNIVERSITYAUDIT")
 @NamedQueries({
-        @NamedQuery(name = TeacherLoginEntity.FIND_BY_LOGIN_Q, query = "SELECT t from TeacherLoginEntity as t where t.login = :login"),
-        @NamedQuery(name = TeacherLoginEntity.FIND_BY_HUMAN_Q, query = "SELECT t from TeacherLoginEntity as t where t.humanid = :human")
+        @NamedQuery(name = TeacherLoginEntity.FIND_BY_LOGIN_Q, query = "from TeacherLoginEntity as t where t.login = :login"),
+        @NamedQuery(name = TeacherLoginEntity.FIND_BY_HUMAN_Q, query = "from TeacherLoginEntity as t where t.humanid = :human")
 }
 )
 public class TeacherLoginEntity {

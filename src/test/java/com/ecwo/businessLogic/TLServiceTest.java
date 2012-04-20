@@ -9,6 +9,7 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Properties;
 
 /**
  * Created by IntelliJ IDEA.
@@ -30,6 +31,7 @@ public class TLServiceTest extends TestCase {
 
 
     public void setUp() throws Exception {
+
         container = EJBContainer.createEJBContainer();
         context = container.getContext();
         dataSource = (DataSource) context.lookup("java:ecwo_test_DS");
