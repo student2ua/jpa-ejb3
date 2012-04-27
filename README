@@ -1,1 +1,5 @@
-This file was created by IntelliJ IDEA 11.1.1 for binding GitHub repository
+JPA2,EJB3.1, slf4j
+
+Testing:
+1)Embedded JBoss
+2)h2 database
