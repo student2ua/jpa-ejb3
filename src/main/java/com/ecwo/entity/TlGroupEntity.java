@@ -1,6 +1,8 @@
 package com.ecwo.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Collection;
 import java.util.HashSet;
 
@@ -26,7 +28,8 @@ public class TlGroupEntity {
     @Id
     private Integer groupid;
 
-
+    @NotNull(message = "{RoleGroup.name.notnull}")
+    @Size(min = 1,max = 40,message ="{RoleGroup.name.size}" )
     @javax.persistence.Column(name = "NAME", nullable = false, insertable = true, updatable = true, length = 40, precision = 0)
     @Basic
     private String name;

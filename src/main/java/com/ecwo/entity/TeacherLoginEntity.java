@@ -2,6 +2,8 @@ package com.ecwo.entity;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Collection;
 
 /**
@@ -34,7 +36,8 @@ public class TeacherLoginEntity {
     @javax.persistence.Column(name = "HUMANID", unique = true, nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
     @Basic
     private Integer humanid;
-
+    @NotNull(message = "{Login.notNull}")
+    @Size(min = 1, max = 20, message = "{Login.size}")
     @javax.persistence.Column(name = "LOGIN", unique = true, nullable = false, length = 20, precision = 0)
     @Basic
     private String login;

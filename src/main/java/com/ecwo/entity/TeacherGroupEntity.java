@@ -1,6 +1,8 @@
 package com.ecwo.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Set;
 
 /**
@@ -23,6 +25,8 @@ public class TeacherGroupEntity {
     @SequenceGenerator(name = "gen_TeacherGroup", schema = "UNIVERSITYAUDIT", sequenceName = "TEACHERGROUP_SEQ")
     private Integer Id;
 
+    @NotNull (message = "{HumanGroup.name.notNull}")
+    @Size(min = 1,max = 40,message = "{HumanGroup.name.size}")
     @javax.persistence.Column(name = "NAME", nullable = false, insertable = true, updatable = true, length = 40, precision = 0)
     @Basic
     private String name;
