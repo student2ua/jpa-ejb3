@@ -3,3 +3,5 @@ JPA2,EJB3.1, slf4j
 Testing:
 1)Embedded JBoss
 2)h2 database
+
+https://github.com/jboss-jdf/jboss-as-quickstart/blob/master/tasks/pom.xml
