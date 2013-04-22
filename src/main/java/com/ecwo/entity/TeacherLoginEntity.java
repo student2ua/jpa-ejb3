@@ -19,10 +19,9 @@ import java.util.Collection;
 @Entity
 @javax.persistence.Table(name = "TEACHERLOGIN", schema = "UNIVERSITYAUDIT")
 @NamedQueries({
-        @NamedQuery(name = TeacherLoginEntity.FIND_BY_LOGIN_Q, query = "from TeacherLoginEntity as t where t.login = :login"),
-        @NamedQuery(name = TeacherLoginEntity.FIND_BY_HUMAN_Q, query = "from TeacherLoginEntity as t where t.humanid = :human")
-}
-)
+        @NamedQuery(name = TeacherLoginEntity.FIND_BY_LOGIN_Q, query = "select t from TeacherLoginEntity as t where t.login = :login"),
+        @NamedQuery(name = TeacherLoginEntity.FIND_BY_HUMAN_Q, query = "select t from TeacherLoginEntity as t where t.humanid = :human")
+})
 public class TeacherLoginEntity {
     public static final String FIND_BY_LOGIN_Q = "findByLogin";
     public static final String FIND_BY_HUMAN_Q = "findByHuman";
@@ -52,6 +51,13 @@ public class TeacherLoginEntity {
             joinColumns = @JoinColumn(name = "TLID", referencedColumnName = "ID"),
             inverseJoinColumns = @JoinColumn(name = "TGROUPID", referencedColumnName = "GROUPID"))
     private Collection<TlGroupEntity> roleGroups;
+
+    public TeacherLoginEntity() {
+    }
+
+    public TeacherLoginEntity(Integer humanid) {
+        this.humanid = humanid;
+    }
 
     public Integer getId() {
         return id;

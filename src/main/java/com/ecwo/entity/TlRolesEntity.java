@@ -17,10 +17,10 @@ import java.util.Collection;
  */
 
 @javax.persistence.Table(name = "TLROLES", schema = "UNIVERSITYAUDIT")
-@NamedQueries(
-        {@NamedQuery(name = TlRolesEntity.FIND_ALL_BY_NAME_Q, query = "SELECT p FROM TlRolesEntity as p WHERE p.name LIKE :pname"),
-                @NamedQuery(name = TlRolesEntity.FIND_ALL, query = "SELECT p FROM TlRolesEntity as p ")
-        })
+@NamedQueries({
+        @NamedQuery(name = TlRolesEntity.FIND_ALL_BY_NAME_Q, query = "SELECT p FROM TlRolesEntity as p WHERE p.name LIKE :pname"),
+        @NamedQuery(name = TlRolesEntity.FIND_ALL, query = "SELECT p FROM TlRolesEntity as p ")
+})
 @Entity
 public class TlRolesEntity {
     public static final String FIND_ALL_BY_NAME_Q = "findAllRolesLikeName";
