@@ -1,5 +1,7 @@
 package com.ecwo.service;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.List;
 import java.util.Map;
 
@@ -17,18 +19,22 @@ public interface CrudService {
 
     public <T> T create(T t);
 
-    public <T> T find(Class type, Object id);
+    public <T> T find(@NotNull Class type, @NotNull Object id);
 
     public <T> T update(T t);
 
     public void delete(Class type, Object id);
 
-    public <T> List <T>  findWithNamedQuery(String queryName);
+    @NotNull
+    public <T> List<T> findWithNamedQuery(String queryName);
 
+    @NotNull
     public List findWithNamedQuery(String queryName, int resultLimit);
 
+    @NotNull
     public List findWithNamedQuery(String namedQueryName, Map parameters);
 
+    @NotNull
     public List findWithNamedQuery(String namedQueryName, Map parameters, int resultLimit);
-   // List<BaseEntity> findByCriteria(BaseEntityCriteria b)
+    // List<BaseEntity> findByCriteria(BaseEntityCriteria b)
 }

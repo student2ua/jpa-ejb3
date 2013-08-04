@@ -1,5 +1,7 @@
 package com.ecwo.service;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,20 +23,21 @@ import java.util.Map;
 public class QueryParam {
     private Map parameters = null;
 
-    private QueryParam(String name, Object value) {
+    private QueryParam(@NotNull String name, Object value) {
         this.parameters = new HashMap();
         this.parameters.put(name, value);
     }
 
-    public static QueryParam with(String name, Object value) {
+    public static QueryParam with(@NotNull String name, Object value) {
         return new QueryParam(name, value);
     }
 
-    public QueryParam and(String name, Object value) {
+    public QueryParam and(@NotNull String name, Object value) {
         this.parameters.put(name, value);
         return this;
     }
 
+    @NotNull
     public Map parameters() {
         return this.parameters;
     }
