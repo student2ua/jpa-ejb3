@@ -6,14 +6,10 @@ import javax.validation.constraints.Size;
 import java.util.Set;
 
 /**
- * Created by IntelliJ IDEA.
  * User: tor
  * Date: 28.03.12
  * Time: 18:45
- * $Rev::               $:  Revision of last commit
- * $Author::            $:  Author of last commit
- * $Date::              $:  Date of last commit
- * объединение учителей  (хуманов)
+ * РѕР±СЉРµРґРёРЅРµРЅРёРµ СѓС‡РёС‚РµР»РµР№  (С…СѓРјР°РЅРѕРІ)
  */
 @javax.persistence.Table(name = "TEACHERGROUP", schema = "UNIVERSITYAUDIT")
 @Entity
@@ -25,8 +21,8 @@ public class TeacherGroupEntity {
     @SequenceGenerator(name = "gen_TeacherGroup", schema = "UNIVERSITYAUDIT", sequenceName = "TEACHERGROUP_SEQ")
     private Integer Id;
 
-    @NotNull (message = "{HumanGroup.name.notNull}")
-    @Size(min = 1,max = 40,message = "{HumanGroup.name.size}")
+    @NotNull(message = "{HumanGroup.name.notNull}")
+    @Size(min = 1, max = 40, message = "{HumanGroup.name.size}")
     @javax.persistence.Column(name = "NAME", nullable = false, insertable = true, updatable = true, length = 40, precision = 0)
     @Basic
     private String name;

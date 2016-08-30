@@ -6,14 +6,10 @@ import javax.validation.constraints.Size;
 import java.util.Collection;
 
 /**
- * Created by IntelliJ IDEA.
  * User: tor
  * Date: 28.03.12
  * Time: 18:45
- * $Rev::               $:  Revision of last commit
- * $Author::            $:  Author of last commit
- * $Date::              $:  Date of last commit
- * Роль, а точнее привилегия минимальный кирпичек
+ * Р РѕР»СЊ, Р° С‚РѕС‡РЅРµРµ РїСЂРёРІРёР»РµРіРёСЏ РјРёРЅРёРјР°Р»СЊРЅС‹Р№ РєРёСЂРїРёС‡РµРє
  */
 
 @javax.persistence.Table(name = "TLROLES", schema = "UNIVERSITYAUDIT")

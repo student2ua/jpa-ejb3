@@ -7,16 +7,12 @@ import java.util.Collection;
 import java.util.HashSet;
 
 /**
- * Created by IntelliJ IDEA.
  * User: tor
  * Date: 28.03.12
  * Time: 18:45
- * $Rev::               $:  Revision of last commit
- * $Author::            $:  Author of last commit
- * $Date::              $:  Date of last commit
- * Ãðóïïà Ðîëåé
+ * Ð“Ñ€ÑƒÐ¿Ð¿Ð° Ð Ð¾Ð»ÐµÐ¹
  */
-@javax.persistence.Table(name = "TLGROUP", schema = "UNIVERSITYAUDIT")
+@Table(name = "TLGROUP", schema = "UNIVERSITYAUDIT")
 @NamedQueries(value = @NamedQuery(name = TlGroupEntity.FIND_ALL_GROUPS_BY_NAME_Q, query = "SELECT g FROM TlGroupEntity as g WHERE g.name like :name"))
 @Entity
 public class TlGroupEntity {
@@ -24,13 +20,13 @@ public class TlGroupEntity {
     public static final String FIND_ALL_GROUPS_BY_NAME_Q = "TlGroupEntity.findAllGroupsByName";
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "gen_Group")
     @SequenceGenerator(name = "gen_Group", schema = "UNIVERSITYAUDIT", sequenceName = "TLGROUP_SEQ")
-    @javax.persistence.Column(name = "GROUPID")
+    @Column(name = "GROUPID")
     @Id
     private Integer groupid;
 
     @NotNull(message = "{RoleGroup.name.notnull}")
-    @Size(min = 1,max = 40,message ="{RoleGroup.name.size}" )
-    @javax.persistence.Column(name = "NAME", nullable = false, insertable = true, updatable = true, length = 40, precision = 0)
+    @Size(min = 1, max = 40, message = "{RoleGroup.name.size}")
+    @Column(name = "NAME", nullable = false, insertable = true, updatable = true, length = 40, precision = 0)
     @Basic
     private String name;
 

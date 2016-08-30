@@ -14,7 +14,7 @@ import java.util.Collection;
  * $Rev::               $:  Revision of last commit
  * $Author::            $:  Author of last commit
  * $Date::              $:  Date of last commit
- * Основная ячейка для логина пароля
+ * РћСЃРЅРѕРІРЅР°СЏ СЏС‡РµР№РєР° РґР»СЏ Р»РѕРіРёРЅР° РїР°СЂРѕР»СЏ
  */
 @Entity
 @javax.persistence.Table(name = "TEACHERLOGIN", schema = "UNIVERSITYAUDIT")
